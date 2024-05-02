@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 interface OfficeState {
-    characters: [];
+    characters: [] ;
     characterDetails: CharacterDetail | null;
     error: string | null;
     meta: Meta;

@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import useOfficeStore from "../store/useOfficeAPI";
 import CharacterCard from "./CharacterCard";
 
+interface Character {
+  id: string;
+  name: string;
+  gender: string;
+  actor: string;
+}
+
 const MainPage = () => {
   const { characters, meta, loadCharacters, loading, error } = useOfficeStore();
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,7 +34,7 @@ const MainPage = () => {
     setCurrentPage(1); 
   };
 
-  const filteredCharacters = characters.filter((character) =>
+  const filteredCharacters = characters.filter((character:Character) =>
     character.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -64,7 +71,7 @@ const MainPage = () => {
       <div className="flex p-5">
         <div className="flex flex-wrap justify-start mt-10">
           {filteredCharacters.map((character) => (
-            <CharacterCard key={character.id} character={character} />
+            <CharacterCard key={character} character={character} />
           ))}
         </div>
       </div>

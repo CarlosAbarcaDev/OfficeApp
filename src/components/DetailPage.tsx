@@ -16,8 +16,18 @@ const DetailPage = () => {
   console.log(characterDetails);
   const GenderIcon =
     characterDetails?.gender === "Male" ? FcBusinessman : FcBusinesswoman;
-    if (loading) return <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">Loading...</p>;
-    if (error) return <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">Error: {error}</p>;
+  if (loading)
+    return (
+      <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">
+        Loading...
+      </p>
+    );
+  if (error)
+    return (
+      <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">
+        Error: {error}
+      </p>
+    );
   return (
     <div>
       <div className="flex h-screen items-start justify-center bg-gray-900 p-5">
@@ -70,12 +80,8 @@ const DetailPage = () => {
               </li>
             </ul>
             <div className="flex justify-start space-x-5">
-             
               <Link to={"/"} className="flex w-full">
-                <button
-                  className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold"
-                  
-                >
+                <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 p-5 py-3 font-semibold">
                   Back
                 </button>
               </Link>

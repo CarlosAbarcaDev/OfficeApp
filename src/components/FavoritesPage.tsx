@@ -25,7 +25,7 @@ const FavoritesPage = () => {
         {favorites.length > 0 ? (
           favorites.map((character) => <CharacterCard character={character} />)
         ) : (
-          <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">No tienes personajes favoritos.</p>
+          <p className="text-5xl text-violet-900 h-screen flex justify-center mt-40 font-bold">Choose your favorite character from the main list..</p>
         )}
       </div>
     </div>

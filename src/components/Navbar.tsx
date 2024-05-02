@@ -2,7 +2,10 @@ const Navbar = () => {
   return (
     <header className="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
       <div className="flex-1 flex justify-between items-center">
-        <a href="/" className="text-4xl font-serif italic font-light text-black ">
+        <a
+          href="/"
+          className="text-4xl font-serif italic font-light text-black "
+        >
           The Office App
         </a>
       </div>
@@ -32,7 +35,6 @@ const Navbar = () => {
                 Go to your Favorites
               </a>
             </li>
-           
           </ul>
         </nav>
       </div>
